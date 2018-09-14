@@ -2,17 +2,9 @@
 var mysql = require("mysql");
 var connection;
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    port: 3306,
-    host: 'local host',
-    user: 'root',
-    passowrd: 'root',
-    databse: 'burgers_db'
-  })
-};
+// Set the port of our application
+// process.env.PORT lets the port be set by Heroku
+const port = process.env.PORT || 3000;
 
 
 // var connection = mysql.createConnection({
