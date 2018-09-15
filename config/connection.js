@@ -7,13 +7,13 @@ var connection;
 const port = process.env.PORT || 3000;
 
 
-// var connection = mysql.createConnection({
-//   port: 3306,
-//   host: "localhost",
-//   user: "root",
-//   password: "root",
-//   database: "burgers_db"
-// });
+var connection = mysql.createConnection({
+  port: 3306,
+  host: "localhost",
+  user: "root",
+  password: "root",
+  database: "burgers_db"
+});
 
 // Make connection.
 connection.connect(function(err) {
